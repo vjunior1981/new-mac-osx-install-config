@@ -206,6 +206,7 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
 
 * Configure zsh and prompt
     * `sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh`
+    * `mv ~/.bash_history ~/.bash_history_OLD && ln -s ~/.zsh_history ~/.bash_history`
     * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
     * `curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash`
     * `$(brew --prefix)/opt/fzf/install`
@@ -218,15 +219,22 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
     * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/neofetch/cyberpunk-2077-neofetch.jpg -O ~/Pictures/neofetch/cyberpunk-2077-neofetch.jpg`
     * `sed -i 's/.*source $ZSH\/oh-my-zsh.sh.*/\n###\n# Starting Spaceship Propmt configuration: https:\/\/github.com\/denysdovhan\/spaceship-prompt\nZSH_THEME="spaceship"\n###\n\n\n&/' ~/.zshrc`
     * `sed -i 's/.*source $ZSH\/oh-my-zsh.sh.*/\n###\n# Spaceship prompt configuration:\nSPACESHIP_PROMPT_ADD_NEWLINE=\"true\"\nSPACESHIP_CHAR_SYMBOL=\" \\uf0e7\"\nSPACESHIP_CHAR_PREFIX=\"\\uf296\"\nSPACESHIP_CHAR_SUFFIX=(\" \")\nSPACESHIP_CHAR_COLOR_SUCCESS=\"yellow\"\nSPACESHIP_PROMPT_DEFAULT_PREFIX=\"\$USER\"\nSPACESHIP_PROMPT_FIRST_PREFIX_SHOW=\"true\"\nSPACESHIP_USER_SHOW=\"true\"\n###\n\n&/' ~/.zshrc`
-    * `cd $ZSH_CUSTOM/plugins; git clone https://github.com/chrissicool/zsh-256color && git clone https://github.com/b4b4r07/emoji-cli.git && \
+    * `cd $ZSH_CUSTOM/plugins; git clone https://github.com/chrissicool/zsh-256color && git clone https://github.com/b4b4r07/emoji-cli.git && https://github.com/gko/listbox.git && \
 git clone https://github.com/MichaelAquilina/zsh-emojis.git && git clone git://github.com/gmatheu/zsh-explain-shell.git && \
 git clone https://github.com/leophys/zsh-plugin-fzf-finder.git && git clone https://github.com/zpm-zsh/colors.git && \
 git clone https://github.com/fabiokiatkowski/exercism.plugin.zsh.git && git clone https://github.com/tysonwolker/iterm-tab-colors.git && \
-git clone https://github.com/marzocchi/zsh-notify.git && git clone https://github.com/amstrad/oh-my-matrix && \
+git clone https://github.com/marzocchi/zsh-notify.git && \
 git clone https://github.com/gko/ssh-connect.git && git clone https://github.com/srijanshetty/zsh-pip-completion.git`
-    * `sed -i 's/git$/zsh-256color\n  ansiweather\n  aws\n  colored-man-pages\n  cp\n  dash\n  emoji-clock\n  emoji\n  emoji-cli\n  zsh-emojis\n  zsh-explain-shell\n  zsh-plugin-fzf-finder\n  colors\n  exercism\n  iterm-tab-colors\n  zsh-notify\n  matrix\n  ssh-connect\n  zsh-pip-completion\n  git\n  history\n  iterm2\n  nmap\n  osx\n  pep8\n  python\n  rsync\n  screen\n  sublime\n  terraform\n  vagrant-prompt\n  vagrant\n  zsh-navigation-tools\n  zsh_reload\n  pip\n  last-working-dir\n  zsh-syntax-highlighting\n  zsh-autosuggestions/g' ~/.zshrc`
+    * `sed -i 's/git$/zsh-256color\n  ansiweather\n  aws\n  colored-man-pages\n  cp\n  dash\n  emoji-clock\n  emoji\n  emoji-cli\n  zsh-emojis\n  zsh-explain-shell\n  zsh-plugin-fzf-finder\n  colors\n  exercism\n  iterm-tab-colors\n  zsh-notify\n  ssh-connect\n  zsh-pip-completion\n  git\n  history\n  iterm2\n  nmap\n  osx\n  pep8\n  python\n  rsync\n  screen\n  sublime\n  terraform\n  vagrant-prompt\n  vagrant\n  zsh-navigation-tools\n  zsh_reload\n  pip\n  last-working-dir\n  zsh-syntax-highlighting\n  zsh-autosuggestions/g' ~/.zshrc`
     * `ln -s /Users/vitorjr/Insync/vitorjr81/01-OS-tweaks-envs/00-osx/00-folders-to-sync/99-repo-clones ~/git/personal`
     * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/.gitconfig -O ~/.gitconfig; wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/.gitignore -O ~/.gitignore; wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/.vimrc -O ~/.vimrc`
+    * `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim -c ':PluginInstall'`
+    * `rm -rf $ZSH_CUSTOM/plugins/ssh-connect/listbox && ln -s $ZSH_CUSTOM/plugins/listbox $ZSH_CUSTOM/plugins/ssh-connect/listbox`
+    * `echo "source \$ZSH_CUSTOM/plugins/listbox/listbox.sh\nsource \$ZSH_CUSTOM/plugins/ssh-connect/ssh-connect.sh" >> ~/.zshrc`
+    * `sed -i 's/.*HIST_STAMPS.*/&\nHIST_STAMPS="dd.mm.yyyy"/' ~/.zshrc`
+    * `chmod 600 ~/Insync/vitorjr81/00-private/career/soltius-new-zealand/00-vitor-only/000-keys/id_rsa`
+    * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/ssh-connect/ssh-connect.sh -O $ZSH_CUSTOM/plugins/ssh-connect/ssh-connect.sh`
+    
     
 * Tower
     * Enter mail and license key
@@ -248,3 +256,25 @@ git clone https://github.com/gko/ssh-connect.git && git clone https://github.com
         * Extensions: Download from [here](https://download.virtualbox.org/virtualbox/) and add
     * On terminal run:
         * `vboxmanage hostonlyif remove vboxnet0; vboxmanage hostonlyif create`
+* Finder
+    * Preferences
+        * General
+            - Hard disks, Connected Servers
+            - New Finder windows shows: Home (vitorjr)
+        * Sidebar
+            - Uncheck: iCloud Drive
+            - Check: Music, Pictures, vitorjr, Vitors-MBP15
+        * Advanced
+            - Check: keep folders on top when sorting by name
+            - When performing a search: Search the current folder
+
+![fkill](https://i.imgur.com/o7wTlmn.png)
+![history](https://i.imgur.com/ErK1Om4.png)
+![neofetch](https://i.imgur.com/Hi1d2ml.png)
+
+
+## To-do
+* Get crypt .gitcredentials
+* Get crypt .aws folder
+* Get crypt .ssh folder
+
