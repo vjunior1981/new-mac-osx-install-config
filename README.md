@@ -59,7 +59,7 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
     * Battery -> Turn display off after `10` minutes
     * Power Adapter -> Turn display off after `30` minutes
 * Keyboard
-    * Keyboard 
+    * Keyboard
         * Key Repeat -> Faster possible
         * Delay Until Repeat -> Shortest possible
         * Check Turn keyboard backlight of `30` secs of inactivity
@@ -126,7 +126,7 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
     * Spotify
     * Sublime Text 3
     * Tower
-    
+
 ## Comercial Softwares and licenses:
 * For a better finder: [Forklift3](https://binarynights.com)
 * For github: [Tower](https://www.git-tower.com/)
@@ -140,7 +140,7 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
    * BeFocusedPro: Pomodoro time manager
    * New Paint X: Easy edit images
    * Pdf Expert: Edit pdf files
-   
+
 ## Configure automatic startup software:
 * System Preferences -> User & Groups -> Login itens
    * Add
@@ -150,7 +150,7 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
    * Remove
       * iTunes Helper
       * Skype for Business
-   
+
 
 ## Configure softwares:
 * Forklift
@@ -174,7 +174,7 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
     * Preferences
         * General
             * Check Quit when all windows are closed
-            * Uncheck Confirm closing multiple sessions 
+            * Uncheck Confirm closing multiple sessions
             * Uncheck Confirm "Quit iTerm2" command
             * Check Update to beta test versions when available
             * Check Applications in terminal may access clipboard
@@ -234,8 +234,8 @@ git clone https://github.com/gko/ssh-connect.git && git clone https://github.com
     * `sed -i 's/.*HIST_STAMPS.*/&\nHIST_STAMPS="dd.mm.yyyy"/' ~/.zshrc`
     * `chmod 600 ~/Insync/vitorjr81/00-private/career/soltius-new-zealand/00-vitor-only/000-keys/id_rsa`
     * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/ssh-connect/ssh-connect.sh -O $ZSH_CUSTOM/plugins/ssh-connect/ssh-connect.sh`
-    
-    
+
+
 * Tower
     * Enter mail and license key
     * Name and e-mail
@@ -245,7 +245,7 @@ git clone https://github.com/gko/ssh-connect.git && git clone https://github.com
     * Preferences
         * General
             * Terminal: iTerm
-* Vagrant Manager    
+* Vagrant Manager
     * Preferences
         * Terminal iTerm
         * Terminal editor vim
@@ -280,4 +280,5 @@ git clone https://github.com/gko/ssh-connect.git && git clone https://github.com
 * Get crypt .gitcredentials
 * Get crypt .aws folder
 * Get crypt .ssh folder
+* Configure sublime-text and plugins
 
