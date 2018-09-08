@@ -11,7 +11,11 @@ vitorjr         ALL = (ALL) NOPASSWD:ALL
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * Install casks:
 
-`brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spectacle sublime-text homebrew/cask-versions/tunnelblick-beta vagrant-manager vlc zoomus appcleaner cheatsheet java microsoft-office screenflow skype-for-business spotify tower-beta vagrant virtualbox vnc-viewer zoomus-outlook-plugin google-chrome insync iterm iterm2-beta`
+`
+brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spectacle sublime-text homebrew/cask-versions/tunnelblick-beta vagrant-manager vlc zoomus appcleaner cheatsheet java microsoft-office screenflow skype-for-business spotify tower-beta vagrant virtualbox vnc-viewer zoomus-outlook-plugin google-chrome insync iterm2-beta forklift`
+
+`
+brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions`
 
 ## System Preferences
 * General
@@ -75,9 +79,50 @@ vitorjr         ALL = (ALL) NOPASSWD:ALL
     * Check Backup Automatically
     * Configure TimeCapsule for backup server
     * Create folder ~/Insync and ignore on Time Machine
+
+## Dock icons
+* Remove:
+    * Siri
+    * Launchpad
+    * Safari
+    * Mail
+    * Contacts
+    * Calendar
+    * Notes
+    * Photos
+    * Reminders
+    * Maps
+    * Messages
+    * Facetime
+    * iTunes
+    * iBooks
+    * App Store
+    * Skype for Business
+* Keep (order)
+    * Finder
+    * Google Chrome
+    * Authy
+    * iTerm
+    * Keybase
+    * Skype
+    * Spotify
+    * Sublime Text 3
+    * Tower
     
 ## Comercial Softwares and licenses:
-Forklift3: https://binarynights.com
+* For a better finder: [Forklift3] (https://binarynights.com)
+* For github: [Tower] (https://www.git-tower.com/)
+* For screenrecorder: [Screenflow] (https://www.telestream.net/screenflow)
+* For touchbar customization: [BetterTouchTool] (https://folivora.ai/)
+* For documentation: [Dash] (https://kapeli.com/dash)
+* For NTFS: [Paragon] (https://www.paragon-software.com/home/ntfs-mac/)
+* For gmail/calendar/contacts: [Mailplane] (https://mailplaneapp.com/)
+* For diff files/folders: [DeltaWalker] (https://www.deltawalker.com/)
+* AppleStore:
+   * BeFocusedPro: Pomodoro time manager
+   * New Paint X: Easy edit images
+   * Pdf Expert: Edit pdf files
+
 
     
     
