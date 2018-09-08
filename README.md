@@ -1,5 +1,90 @@
 # new-mac-osx-install-config
 
+## Add entry to sudoers
+`
+sudo visudo
+vitorjr         ALL = (ALL) NOPASSWD:ALL
+`
+## Download and install homebrew
+* Open terminal:
+
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+* Install casks:
+
+`brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spectacle sublime-text homebrew/cask-versions/tunnelblick-beta vagrant-manager vlc zoomus appcleaner cheatsheet java microsoft-office screenflow skype-for-business spotify tower-beta vagrant virtualbox vnc-viewer zoomus-outlook-plugin google-chrome insync iterm iterm2-beta`
+
+## System Preferences
+* General
+    * Appearance - Graphite
+    * Check Use dark menu bar and Dock
+    * Default web browser: Google Chrome
+    * Recent itens: `15`
+* Desktop and Screen Saver
+    * Desktop -> Change wallpaper
+    * Screen Saver -> Start with `10m`
+    * Screen Saver -> Check Show with clock
+    * Screen Saver -> Hot Corners -> Upper Right -> Put display to sleep
+* Dock
+    * Size - Smaller possible
+    * Check Magnification and move the slider up to bottom button
+    * Check Minimize windows into application icon
+* Mission Control
+    * Dashboard: As Space
+* Language & Region
+    * Add Portuguese (Brazil) language
+    * Check 24-hour-time
+* Security & Privacy
+    * General -> Require password `5` seconds after sleep or screen save begins
+* Displays
+    * Display -> Scaled -> More Space
+* Energy Saver
+    * Battery -> Turn display off after `10` minutes
+    * Power Adapter -> Turn display off after `30` minutes
+* Keyboard
+    * Keyboard -> Key Repeat -> Faster possible
+    * Keyboard -> Delay Until Repeat -> Shortest possible
+    * Keyboard -> Check Turn keyboard backlight of `30` secs of inactivity
+    * Text -> Exclude omw substituition
+    * Text -> Uncheck Correct spelling automatically
+    * Text -> Uncheck use smart quotes
+    * Dictation -> Shortcut: off
+* Trackpad
+    * Point & Click -> Check tap to click
+    * Point & Click -> Tracking Speed: Slide above to first e from `speed` word.
+    * More Gestures -> Check App Exposé
+* Internet Accounts
+    * Google -> Contacts
+    * Twitter -> Share menu
+    * Facebook -> Share menu
+    * Linkedin -> Share menu & Notifications
+* Network
+    * Advanced -> Wins: Set hostname (Vitors-MBP15)
+* Extensions
+    * All -> OneDrive-Finder
+    * Share menu -> Uncheck: Reminders, Notes, Add to Aperture, Add to Reading List, Flickr, Vimeo
+    * Today -> Uncheck: Stocks, Reminders  --  Check: World Clock, Calculator, Now Playing
+* Sharing
+    * Computer Name -> Set hostname (Vitors-MBP15)
+    * Check services -> Screen Sharing, File Sharing, Remote Login
+* Touch ID
+    * Configure another finger
+* Date and Time
+    * Clock -> Check Show Date
+* Time Machine
+    * Check Show Time Machine in Menu Bar
+    * Check Backup Automatically
+    * Configure TimeCapsule for backup server
+    * Create folder ~/Insync and ignore on Time Machine
+    
+## Comercial Softwares and licenses:
+Forklift3: https://binarynights.com
+
+    
+    
+   
+    
+    
+
 ```    1  git clone https://github.com/zdharma/fast-syntax-highlighting.git \\n  ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
     2  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
     3  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
