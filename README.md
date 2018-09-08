@@ -18,7 +18,7 @@ brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spect
 brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions thefuck pipes-sh ansiweather fzf peco neofetch w3m npm`
 
 `
-brew reinstall gnu-sed --with-default-names`
+brew reinstall gnu-sed --with-default-names && gem install colorls`
 
 `
 cd ~/Library/Fonts && { curl -O 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Mononoki/Regular/complete/mononoki-Regular%20Nerd%20Font%20Complete.ttf' ; cd -; }`
@@ -225,7 +225,7 @@ git clone https://github.com/marzocchi/zsh-notify.git && git clone https://githu
 git clone https://github.com/gko/ssh-connect.git && git clone https://github.com/srijanshetty/zsh-pip-completion.git`
     * `sed -i 's/git$/zsh-256color\n  ansiweather\n  aws\n  colored-man-pages\n  cp\n  dash\n  emoji-clock\n  emoji\n  emoji-cli\n  zsh-emojis\n  zsh-explain-shell\n  zsh-plugin-fzf-finder\n  colors\n  exercism\n  iterm-tab-colors\n  zsh-notify\n  matrix\n  ssh-connect\n  zsh-pip-completion\n  git\n  history\n  iterm2\n  nmap\n  osx\n  pep8\n  python\n  rsync\n  screen\n  sublime\n  terraform\n  vagrant-prompt\n  vagrant\n  zsh-navigation-tools\n  zsh_reload\n  pip\n  last-working-dir\n  zsh-syntax-highlighting\n  zsh-autosuggestions/g' ~/.zshrc`
     * `ln -s /Users/vitorjr/Insync/vitorjr81/01-OS-tweaks-envs/00-osx/00-folders-to-sync/99-repo-clones ~/git/personal`
-    * 
+    * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/.gitconfig -O ~/.gitconfig; wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/.gitignore -O ~/.gitignore; wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/.vimrc -O ~/.vimrc`
     
 * Tower
     * Enter mail and license key
