@@ -25,9 +25,10 @@ brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-cop
     * Recent itens: `15`
 * Desktop and Screen Saver
     * Desktop -> Change wallpaper
-    * Screen Saver -> Start with `10m`
-    * Screen Saver -> Check Show with clock
-    * Screen Saver -> Hot Corners -> Upper Right -> Put display to sleep
+    * Screen Saver:
+        * Start with `10m`
+        * Check Show with clock
+        * Hot Corners -> Upper Right -> Put display to sleep
 * Dock
     * Size - Smaller possible
     * Check Magnification and move the slider up to bottom button
@@ -45,16 +46,19 @@ brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-cop
     * Battery -> Turn display off after `10` minutes
     * Power Adapter -> Turn display off after `30` minutes
 * Keyboard
-    * Keyboard -> Key Repeat -> Faster possible
-    * Keyboard -> Delay Until Repeat -> Shortest possible
-    * Keyboard -> Check Turn keyboard backlight of `30` secs of inactivity
-    * Text -> Exclude omw substituition
-    * Text -> Uncheck Correct spelling automatically
-    * Text -> Uncheck use smart quotes
+    * Keyboard 
+        * Key Repeat -> Faster possible
+        * Delay Until Repeat -> Shortest possible
+        * Check Turn keyboard backlight of `30` secs of inactivity
+    * Text
+        * Exclude omw substituition
+        * Uncheck Correct spelling automatically
+        * Uncheck use smart quotes
     * Dictation -> Shortcut: off
 * Trackpad
-    * Point & Click -> Check tap to click
-    * Point & Click -> Tracking Speed: Slide above to first e from `speed` word.
+    * Point & Click
+        * Check tap to click
+        * Tracking Speed: Slide above to first e from `speed` word.
     * More Gestures -> Check App Exposé
 * Internet Accounts
     * Google -> Contacts
@@ -140,10 +144,39 @@ brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-cop
    * After install and register, only this options should be enabled
       * Enable ForkLift Mini in the menubar
       * Enable Dark Mode
-      * Commander Style Keyboard Shortcuts
+      * Check for updates automatically
     * Preferences
-        * Terminal application -> iTerm
-
+      * General
+          * Terminal application -> iTerm
+          * Sync Favorites -> Dropbox (configure account)
+      * Editing: Add Sublime Text for extensions -> .txt, .log, .sql, .sh, .py
+    * Make Forklift default file handler
+        * `defaults write -g NSFileViewer -string com.binarynights.ForkLift-3` and reboot
+    * Reverts to finder
+        * `defaults delete -g NSFileViewer` and reboot
+* Authy
+    * Add device
+    * Unlock one account with password to decrypt backup
+* iTerm
+    * Preferences
+        * General
+            * Check Quit when all windows are closed
+            * Uncheck Confirm closing multiple sessions 
+            * Uncheck Confirm "Quit iTerm2" command
+            * Check Update to beta test versions when available
+            * Check Applications in terminal may access clipboard
+            * Check Smart Window placement
+            * Uncheck Adjust window when changing font size
+        * Appearance
+            * Theme: Dark
+            * Uncheck Show tab bar in full screen
+        * Profiles
+            * General - Schemes handled: SSH - iterm
+            * Colors
+                - Download material desing iterm scheme [here](https://github.com/MartinSeeler/iterm2-material-design/raw/master/material-design-colors.itermcolors)
+                - Color preset - import
+                - Color preset - choose material-desing-colors
+                - 
 
     
     
