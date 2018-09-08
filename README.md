@@ -1,11 +1,11 @@
 # new-mac-osx-install-config
 
-## Add entry to sudoers
+## Add entry to sudoers:
 `
 sudo visudo
 vitorjr         ALL = (ALL) NOPASSWD:ALL
 `
-## Download and install homebrew
+## Download and install homebrew:
 * Open terminal:
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -17,7 +17,7 @@ brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spect
 `
 brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions`
 
-## System Preferences
+## System Preferences:
 * General
     * Appearance - Graphite
     * Check Use dark menu bar and Dock
@@ -80,8 +80,8 @@ brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-cop
     * Configure TimeCapsule for backup server
     * Create folder ~/Insync and ignore on Time Machine
 
-## Dock icons
-* Remove:
+## Dock icons:
+* Remove
     * Siri
     * Launchpad
     * Safari
@@ -100,6 +100,7 @@ brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-cop
     * Skype for Business
 * Keep (order)
     * Finder
+    * Forklift
     * Google Chrome
     * Authy
     * iTerm
@@ -110,18 +111,38 @@ brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-cop
     * Tower
     
 ## Comercial Softwares and licenses:
-* For a better finder: [Forklift3] (https://binarynights.com)
-* For github: [Tower] (https://www.git-tower.com/)
-* For screenrecorder: [Screenflow] (https://www.telestream.net/screenflow)
-* For touchbar customization: [BetterTouchTool] (https://folivora.ai/)
-* For documentation: [Dash] (https://kapeli.com/dash)
-* For NTFS: [Paragon] (https://www.paragon-software.com/home/ntfs-mac/)
-* For gmail/calendar/contacts: [Mailplane] (https://mailplaneapp.com/)
-* For diff files/folders: [DeltaWalker] (https://www.deltawalker.com/)
+* For a better finder: [Forklift3](https://binarynights.com)
+* For github: [Tower](https://www.git-tower.com/)
+* For screenrecorder: [Screenflow](https://www.telestream.net/screenflow)
+* For touchbar customization: [BetterTouchTool](https://folivora.ai/)
+* For documentation: [Dash](https://kapeli.com/dash)
+* For NTFS: [Paragon](https://www.paragon-software.com/home/ntfs-mac/)
+* For gmail/calendar/contacts: [Mailplane](https://mailplaneapp.com/)
+* For diff files/folders: [DeltaWalker](https://www.deltawalker.com/)
 * AppleStore:
    * BeFocusedPro: Pomodoro time manager
    * New Paint X: Easy edit images
    * Pdf Expert: Edit pdf files
+   
+## Configure automatic startup software:
+* System Preferences -> User & Groups -> Login itens
+   * Add
+      * Spectacle
+      * CheatSheet
+      * Vagrant Manager
+   * Remove
+      * iTunes Helper
+      * Skype for Business
+   
+
+## Configure softwares:
+* Forklift
+   * After install and register, only this options should be enabled
+      * Enable ForkLift Mini in the menubar
+      * Enable Dark Mode
+      * Commander Style Keyboard Shortcuts
+    * Preferences
+        * Terminal application -> iTerm
 
 
     
