@@ -12,10 +12,21 @@ vitorjr         ALL = (ALL) NOPASSWD:ALL
 * Install casks:
 
 `
-brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spectacle sublime-text homebrew/cask-versions/tunnelblick-beta vagrant-manager vlc zoomus appcleaner cheatsheet java microsoft-office screenflow skype-for-business spotify tower-beta vagrant virtualbox vnc-viewer zoomus-outlook-plugin google-chrome insync iterm2-beta forklift`
+brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spectacle sublime-text homebrew/cask-versions/tunnelblick-beta vagrant-manager vlc zoomus appcleaner cheatsheet java microsoft-office screenflow skype-for-business spotify tower-beta vagrant virtualbox vnc-viewer zoomus-outlook-plugin google-chrome insync iterm2-beta forklift deltawalker slack`
 
 `
-brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions`
+brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions thefuck pipes-sh ansiweather fzf peco neofetch w3m npm`
+
+`
+brew reinstall gnu-sed --with-default-names`
+
+`
+cd ~/Library/Fonts && { curl -O 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Mononoki/Regular/complete/mononoki-Regular%20Nerd%20Font%20Complete.ttf' ; cd -; }`
+
+`
+mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terraform ~/VirtualBoxVMs ~/Pictures/neofetch`
+
+
 
 ## System Preferences:
 * General
@@ -176,10 +187,67 @@ brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-cop
                 - Download material desing iterm scheme [here](https://github.com/MartinSeeler/iterm2-material-design/raw/master/material-design-colors.itermcolors)
                 - Color preset - import
                 - Color preset - choose material-desing-colors
-                - 
+            * Text
+                - Check Blinking text allowed
+                - Change font: 12pt mononoki-Regular Nerd Font Complete
+            * Window
+                - Transparency: slider under the `y`
+                - Columns `400` Rows `300`
+            * Terminal
+                - Check Unlimited Scrollback
+            * Session
+                - Check Automatically log session input files in: `/Users/vitorjr/iTerm/logs/output`
+            * Advanced
+                - Triggers -> Edit
+                    - "msg":"ORA-00600" -> Post Notification... -> Passcode \0
+                    - "msg":"ORA-00600" -> Highlight text... -> Text: White | Background: Red
 
+* Configure zsh and prompt
+* Install [zplug](https://github.com/zplug/zplug)
+    * `sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh`
+    * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+    * `curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash`
+    * `$(brew --prefix)/opt/fzf/install`
+    * `sed -i '/fzf/d' ~/.zshrc`
+    * `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+    * `git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions`
+    * `echo "eval \$(thefuck --alias)\nneofetch\nansiweather|tee ~/.ansiweather" >> ~/.zshrc`
+    * `sed -i '/ZSH_THEME/s/^/#/g' ~/.zshrc`
+    * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/neofetch/config.config -O ~/.config/neofetch/config.conf`
+    * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/neofetch/cyberpunk-2077-neofetch.jpg -O ~/Pictures/neofetch/cyberpunk-2077-neofetch.jpg`
+    * `sed -i 's/.*source $ZSH\/oh-my-zsh.sh.*/\n###\n# Starting Spaceship Propmt configuration: https:\/\/github.com\/denysdovhan\/spaceship-prompt\nZSH_THEME="spaceship"\n###\n\n\n&/' ~/.zshrc`
+    * `sed -i 's/.*source $ZSH\/oh-my-zsh.sh.*/\n###\n# Spaceship prompt configuration:\nSPACESHIP_PROMPT_ADD_NEWLINE=\"true\"\nSPACESHIP_CHAR_SYMBOL=\" \\uf0e7\"\nSPACESHIP_CHAR_PREFIX=\"\\uf296\"\nSPACESHIP_CHAR_SUFFIX=(\" \")\nSPACESHIP_CHAR_COLOR_SUCCESS=\"yellow\"\nSPACESHIP_PROMPT_DEFAULT_PREFIX=\"\$USER\"\nSPACESHIP_PROMPT_FIRST_PREFIX_SHOW=\"true\"\nSPACESHIP_USER_SHOW=\"true\"\n###\n\n&/' ~/.zshrc`
+    * `cd $ZSH_CUSTOM/plugins; git clone https://github.com/chrissicool/zsh-256color && git clone https://github.com/b4b4r07/emoji-cli.git && \
+git clone https://github.com/MichaelAquilina/zsh-emojis.git && git clone git://github.com/gmatheu/zsh-explain-shell.git && \
+git clone https://github.com/leophys/zsh-plugin-fzf-finder.git && git clone https://github.com/zpm-zsh/colors.git && \
+git clone https://github.com/fabiokiatkowski/exercism.plugin.zsh.git && git clone https://github.com/tysonwolker/iterm-tab-colors.git && \
+git clone https://github.com/marzocchi/zsh-notify.git && git clone https://github.com/amstrad/oh-my-matrix && \
+git clone https://github.com/gko/ssh-connect.git && git clone https://github.com/srijanshetty/zsh-pip-completion.git`
+    * `sed -i 's/git$/zsh-256color\n  ansiweather\n  aws\n  colored-man-pages\n  cp\n  dash\n  emoji-clock\n  emoji\n  emoji-cli\n  zsh-emojis\n  zsh-explain-shell\n  zsh-plugin-fzf-finder\n  colors\n  exercism\n  iterm-tab-colors\n  zsh-notify\n  matrix\n  ssh-connect\n  zsh-pip-completion\n  git\n  history\n  iterm2\n  nmap\n  osx\n  pep8\n  python\n  rsync\n  screen\n  sublime\n  terraform\n  vagrant-prompt\n  vagrant\n  zsh-navigation-tools\n  zsh_reload\n  pip\n  last-working-dir\n  zsh-syntax-highlighting\n  zsh-autosuggestions/g' ~/.zshrc`
+    * `ln -s /Users/vitorjr/Insync/vitorjr81/01-OS-tweaks-envs/00-osx/00-folders-to-sync/99-repo-clones ~/git/personal`
+    * 
     
-    
+* Tower
+    * Enter mail and license key
+    * Name and e-mail
+    * Diff and merge tool: Deltawalker
+    * Default dir: ~/git/personal
+    * Service account: add github using OAuth Access Token
+    * Preferences
+        * General
+            * Terminal: iTerm
+* Vagrant Manager    
+    * Preferences
+        * Terminal iTerm
+        * Terminal editor vim
+        * Check launch at login
+* VirtualBox
+    * Preferences
+        * General: Default machine folder `/Users/vitorjr/VirtualBoxVMs`
+        * Extensions: Download from [here](https://download.virtualbox.org/virtualbox/) and add
+    * On terminal run:
+        * `vboxmanage hostonlyif remove vboxnet0; vboxmanage hostonlyif create`
+        
    
     
     
