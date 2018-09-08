@@ -268,8 +268,11 @@ git clone https://github.com/gko/ssh-connect.git && git clone https://github.com
             - Check: keep folders on top when sorting by name
             - When performing a search: Search the current folder
 
+* *fkill*
 ![fkill](https://i.imgur.com/o7wTlmn.png)
+* *history*
 ![history](https://i.imgur.com/ErK1Om4.png)
+* *neofetch*
 ![neofetch](https://i.imgur.com/Hi1d2ml.png)
 
 
