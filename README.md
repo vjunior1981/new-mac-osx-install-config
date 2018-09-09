@@ -15,14 +15,14 @@ vitorjr         ALL = (ALL) NOPASSWD:ALL
 brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spectacle sublime-text homebrew/cask-versions/tunnelblick-beta vagrant-manager vlc zoomus appcleaner cheatsheet java microsoft-office screenflow skype-for-business spotify tower-beta vagrant virtualbox vnc-viewer zoomus-outlook-plugin google-chrome insync iterm2-beta forklift deltawalker slack`
 
 `
-brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions thefuck pipes-sh ansiweather fzf peco neofetch w3m npm awscli`
+brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions thefuck pipes-sh ansiweather fzf peco neofetch w3m npm awscli coreutils`
 
 `
 brew reinstall gnu-sed --with-default-names`
 `
-gem install colorls && npm install --global fkill fkill-cli ttab`
+gem install colorls && npm install --global fkill fkill-cli ttab ssh-tunnel-manager`
 `
-pip install ansible-lint grip flake8 google_images_download --user`
+pip3 install ansible-lint grip flake8 google_images_download --user`
 
 `
 cd ~/Library/Fonts && { curl -O 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Mononoki/Regular/complete/mononoki-Regular%20Nerd%20Font%20Complete.ttf' ; cd -; }`
