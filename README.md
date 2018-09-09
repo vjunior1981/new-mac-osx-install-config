@@ -15,12 +15,14 @@ vitorjr         ALL = (ALL) NOPASSWD:ALL
 brew cask install adobe-acrobat-reader authy firefox keybase osxfuse skype spectacle sublime-text homebrew/cask-versions/tunnelblick-beta vagrant-manager vlc zoomus appcleaner cheatsheet java microsoft-office screenflow skype-for-business spotify tower-beta vagrant virtualbox vnc-viewer zoomus-outlook-plugin google-chrome insync iterm2-beta forklift deltawalker slack`
 
 `
-brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions thefuck pipes-sh ansiweather fzf peco neofetch w3m npm`
+brew install ack bzip2 fontconfig htop shellcheck vim watch alpine ctags ssh-copy-id ansible lastpass-cli netcat readline terraform_landscape wget archey dialog nmap reattach-to-user-namespace tfenv xz assh dos2unix git rlwrap tree bash-completion expect graphviz ntfs-3g rsync unzip zsh boxes highlight vagrant-completion zsh-completions thefuck pipes-sh ansiweather fzf peco neofetch w3m npm awscli`
 
 `
 brew reinstall gnu-sed --with-default-names`
 `
-gem install colorls && npm install --global fkill fkill-cli`
+gem install colorls && npm install --global fkill fkill-cli ttab`
+`
+pip install ansible-lint grip flake8 google_images_download --user`
 
 `
 cd ~/Library/Fonts && { curl -O 'https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Mononoki/Regular/complete/mononoki-Regular%20Nerd%20Font%20Complete.ttf' ; cd -; }`
@@ -218,7 +220,7 @@ mkdir -p ~/iTerm/logs/output ~/Insync/vitorjr81 ~/git/personal ~/Vagrant ~/Terra
     * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/neofetch/config.config -O ~/.config/neofetch/config.conf`
     * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/neofetch/cyberpunk-2077-neofetch.jpg -O ~/Pictures/neofetch/cyberpunk-2077-neofetch.jpg`
     * `sed -i 's/.*source $ZSH\/oh-my-zsh.sh.*/\n###\n# Starting Spaceship Propmt configuration: https:\/\/github.com\/denysdovhan\/spaceship-prompt\nZSH_THEME="spaceship"\n###\n\n\n&/' ~/.zshrc`
-    * `sed -i 's/.*source $ZSH\/oh-my-zsh.sh.*/\n###\n# Spaceship prompt configuration:\nSPACESHIP_PROMPT_ADD_NEWLINE=\"true\"\nSPACESHIP_CHAR_SYMBOL=\" \\uf0e7\"\nSPACESHIP_CHAR_PREFIX=\"\\uf296\"\nSPACESHIP_CHAR_SUFFIX=(\" \")\nSPACESHIP_CHAR_COLOR_SUCCESS=\"yellow\"\nSPACESHIP_PROMPT_DEFAULT_PREFIX=\"\$USER\"\nSPACESHIP_PROMPT_FIRST_PREFIX_SHOW=\"true\"\nSPACESHIP_USER_SHOW=\"true\"\n###\n\n&/' ~/.zshrc`
+    * `sed -i 's/.*source $ZSH\/oh-my-zsh.sh.*/\n###\n# Spaceship prompt configuration:\nSPACESHIP_PROMPT_ADD_NEWLINE=\"true\"\nSPACESHIP_CHAR_SYMBOL=\" \\uf0e7\"\nSPACESHIP_CHAR_PREFIX=\"\\uf296\"\nSPACESHIP_CHAR_SUFFIX=(\" \")\nSPACESHIP_CHAR_COLOR_SUCCESS=\"green\"\nSPACESHIP_PROMPT_DEFAULT_PREFIX=\"\$USER\"\nSPACESHIP_PROMPT_FIRST_PREFIX_SHOW=\"true\"\n\nSPACESHIP_USER_SHOW=\"always\"\nSPACESHIP_USER_COLOR=\"blue\"\nSPACESHIP_TIME_COLOR=\"green\"\nSPACESHIP_TIME_SHOW=\"true\"\nSPACESHIP_HOST_SHOW=\"always\"\nSPACESHIP_HOST_COLOR=\"red\"\nSPACESHIP_AWS_SYMBOL=\"AWS ☁️  \"\nSPACESHIP_BATTERY_SHOW=\"false\"\n###\n\n&/' ~/.zshrc`
     * `cd $ZSH_CUSTOM/plugins; git clone https://github.com/chrissicool/zsh-256color && git clone https://github.com/b4b4r07/emoji-cli.git && https://github.com/gko/listbox.git && \
 git clone https://github.com/MichaelAquilina/zsh-emojis.git && git clone git://github.com/gmatheu/zsh-explain-shell.git && \
 git clone https://github.com/leophys/zsh-plugin-fzf-finder.git && git clone https://github.com/zpm-zsh/colors.git && \
@@ -234,6 +236,7 @@ git clone https://github.com/gko/ssh-connect.git && git clone https://github.com
     * `sed -i 's/.*HIST_STAMPS.*/&\nHIST_STAMPS="dd.mm.yyyy"/' ~/.zshrc`
     * `chmod 600 ~/Insync/vitorjr81/00-private/career/soltius-new-zealand/00-vitor-only/000-keys/id_rsa`
     * `wget https://github.com/vjunior1981/new-mac-osx-install-config/raw/master/ssh-connect/ssh-connect.sh -O $ZSH_CUSTOM/plugins/ssh-connect/ssh-connect.sh`
+    * `mkdir -p ~/Pictures/neofetch/Cyberpunk_2077 && cd ~/Pictures/neofetch/Cyberpunk_2077 && googleimagesdownload -k "Cyberpunk 2077" -l 30 -s large -n`
 
 
 * Tower
@@ -275,6 +278,10 @@ git clone https://github.com/gko/ssh-connect.git && git clone https://github.com
 * *neofetch*
 ![neofetch](https://i.imgur.com/Hi1d2ml.png)
 
+* Sublime configuration
+    * Install [package control](https://packagecontrol.io/installation)
+    * 
+    
 
 ## To-do
 * Get crypt .gitcredentials
